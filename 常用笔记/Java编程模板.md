@@ -1,4 +1,4 @@
-# 从map拿取一个值并做NULL校验
+## 从map拿取一个值并做NULL校验
 
 ```java
 map.getOrDefault("key", "defaultValue");
@@ -7,7 +7,7 @@ Optional.ofNullable(map.get("key")).orElse("defaultValue");
 
 
 
-# 钩子方法实现
+## 钩子方法实现
 
 ```java
 public abstract class AbstractClass
@@ -41,6 +41,9 @@ public class SubClass extends AbstractClass
         test.execute();
     }
 }
-
 ```
 
+## 添加钩子函数，在关闭虚拟机 如执行Ctrl+C时执行
+```java
+ Runtime.getRuntime().addShutdownHook(Thread hook);
+```
